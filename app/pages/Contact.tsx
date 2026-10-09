@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { Mail, Phone, MapPin, Clock, Send, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
+import { Mail, Phone, MapPin, Clock, Send, Facebook, Twitter, Instagram, Linkedin, ExternalLink } from 'lucide-react';
 import { useState } from 'react';
 
 export function Contact() {
@@ -12,6 +12,9 @@ export function Contact() {
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const mapQuery = encodeURIComponent('Sendafa Beke, Ethiopia');
+  const mapEmbedUrl = `https://maps.google.com/maps?q=${mapQuery}&z=14&output=embed`;
+  const mapDirectionsUrl = `https://www.google.com/maps/search/?api=1&query=${mapQuery}`;
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -232,6 +235,16 @@ export function Contact() {
             className="text-center mb-12"
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Visit Our Office</h2>
+            <a
+              href={mapDirectionsUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 text-[var(--sea-blue)] hover:text-[var(--sea-blue-dark)] font-semibold mb-5"
+            >
+              Sendafa Beke, Ethiopia
+              <ExternalLink className="w-4 h-4" />
+              <span className="sr-only">Open directions in Google Maps</span>
+            </a>
             <div className="w-20 h-1 bg-gradient-to-r from-[var(--sea-blue)] to-[var(--yellow-accent)] mx-auto rounded-full"></div>
           </motion.div>
 
@@ -243,7 +256,7 @@ export function Contact() {
             className="rounded-2xl overflow-hidden shadow-2xl h-[500px]"
           >
             <iframe
-              src="https://maps.app.goo.gl/H9pRMBjVKhNywVyy6"
+              src={mapEmbedUrl}
               width="100%"
               height="100%"
               style={{ border: 0 }}

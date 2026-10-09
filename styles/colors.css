@@ -1,0 +1,342 @@
+/* Enhanced Colorful Styles for CDTRC Website */
+
+/* Vibrant Background Gradients */
+.bg-ocean-gradient {
+  background: linear-gradient(135deg, #129246 0%, #16a855 25%, #22c55e 50%, #34d572 75%, #4ade80 100%);
+}
+
+.bg-sunset-gradient {
+  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #fb923c 100%);
+}
+
+.bg-sky-gradient {
+  background: linear-gradient(to bottom, #e0f2fe 0%, #bae6fd 50%, #7dd3fc 100%);
+}
+
+.bg-tropical-gradient {
+  background: linear-gradient(135deg, #129246 0%, #10b981 50%, #16a855 100%);
+}
+
+/* Colorful Text Gradients */
+.text-ocean-gradient {
+  background: linear-gradient(135deg, #129246, #16a855, #22c55e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-sunset-gradient {
+  background: linear-gradient(135deg, #fbbf24, #f59e0b, #fb923c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-rainbow-gradient {
+  background: linear-gradient(135deg, #129246, #16a855, #fbbf24, #fb923c, #129246);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradient-shift 5s ease infinite;
+}
+
+/* Colorful Buttons */
+.btn-primary {
+  background: linear-gradient(135deg, #129246, #16a855);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  box-shadow: 0 10px 30px rgba(18, 146, 70, 0.3);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.5s ease;
+}
+
+.btn-primary:hover::before {
+  left: 100%;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 40px rgba(18, 146, 70, 0.4);
+}
+
+.btn-secondary {
+  background: linear-gradient(135deg, #fbbf24, #f59e0b);
+  color: #1f2937;
+  padding: 1rem 2rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  box-shadow: 0 10px 30px rgba(251, 191, 36, 0.3);
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 40px rgba(251, 191, 36, 0.4);
+}
+
+/* Colorful Cards */
+.card-blue {
+  background: linear-gradient(135deg, rgba(18, 146, 70, 0.05), rgba(22, 168, 85, 0.05));
+  border: 2px solid rgba(18, 146, 70, 0.2);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  transition: all 0.3s ease;
+}
+
+.card-blue:hover {
+  background: linear-gradient(135deg, rgba(18, 146, 70, 0.1), rgba(22, 168, 85, 0.1));
+  border-color: rgba(18, 146, 70, 0.4);
+  transform: translateY(-5px);
+  box-shadow: 0 20px 50px rgba(18, 146, 70, 0.2);
+}
+
+.card-yellow {
+  background: linear-gradient(135deg, rgba(251, 191, 36, 0.05), rgba(245, 158, 11, 0.05));
+  border: 2px solid rgba(251, 191, 36, 0.2);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  transition: all 0.3s ease;
+}
+
+.card-yellow:hover {
+  background: linear-gradient(135deg, rgba(251, 191, 36, 0.1), rgba(245, 158, 11, 0.1));
+  border-color: rgba(251, 191, 36, 0.4);
+  transform: translateY(-5px);
+  box-shadow: 0 20px 50px rgba(251, 191, 36, 0.2);
+}
+
+.card-gradient {
+  background: linear-gradient(135deg, #ffffff 0%, #f0f9ff 100%);
+  border: 3px solid transparent;
+  background-clip: padding-box;
+  position: relative;
+  border-radius: 1.5rem;
+  padding: 2rem;
+}
+
+.card-gradient::before {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  border-radius: 1.5rem;
+  padding: 3px;
+  background: linear-gradient(135deg, #129246, #16a855, #fbbf24);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  z-index: -1;
+}
+
+/* Colorful Icons */
+.icon-blue {
+  background: linear-gradient(135deg, #129246, #16a855);
+  color: white;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 8px 20px rgba(18, 146, 70, 0.3);
+}
+
+.icon-yellow {
+  background: linear-gradient(135deg, #fbbf24, #f59e0b);
+  color: #1f2937;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 8px 20px rgba(251, 191, 36, 0.3);
+}
+
+.icon-gradient {
+  background: linear-gradient(135deg, #129246, #16a855, #fbbf24);
+  color: white;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 8px 20px rgba(18, 146, 70, 0.3);
+}
+
+/* Colorful Dividers */
+.divider-gradient {
+  height: 4px;
+  width: 100px;
+  background: linear-gradient(90deg, #129246, #16a855, #fbbf24);
+  border-radius: 9999px;
+  margin: 1.5rem auto;
+}
+
+.divider-animated {
+  height: 4px;
+  width: 100px;
+  background: linear-gradient(90deg, #129246, #16a855, #fbbf24, #129246);
+  background-size: 200% 100%;
+  border-radius: 9999px;
+  margin: 1.5rem auto;
+  animation: gradient-slide 3s ease infinite;
+}
+
+@keyframes gradient-slide {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Colorful Badges */
+.badge-ocean {
+  background: linear-gradient(135deg, #129246, #16a855);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  display: inline-block;
+  box-shadow: 0 4px 15px rgba(18, 146, 70, 0.3);
+}
+
+.badge-sun {
+  background: linear-gradient(135deg, #fbbf24, #f59e0b);
+  color: #1f2937;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  display: inline-block;
+  box-shadow: 0 4px 15px rgba(251, 191, 36, 0.3);
+}
+
+/* Colorful Borders */
+.border-ocean {
+  border: 3px solid #129246;
+  border-image: linear-gradient(135deg, #129246, #16a855) 1;
+}
+
+.border-gradient-animated {
+  border: 3px solid transparent;
+  background: linear-gradient(white, white) padding-box,
+              linear-gradient(135deg, #129246, #16a855, #fbbf24, #129246) border-box;
+  background-size: 200% 200%;
+  animation: gradient-shift 4s ease infinite;
+}
+
+/* Colorful Shadows */
+.shadow-ocean {
+  box-shadow: 0 10px 40px rgba(18, 146, 70, 0.25);
+}
+
+.shadow-ocean-lg {
+  box-shadow: 0 20px 60px rgba(18, 146, 70, 0.3);
+}
+
+.shadow-sun {
+  box-shadow: 0 10px 40px rgba(251, 191, 36, 0.25);
+}
+
+.shadow-sun-lg {
+  box-shadow: 0 20px 60px rgba(251, 191, 36, 0.3);
+}
+
+.shadow-rainbow {
+  box-shadow: 
+    0 0 20px rgba(18, 146, 70, 0.3),
+    0 0 40px rgba(22, 168, 85, 0.2),
+    0 0 60px rgba(251, 191, 36, 0.1);
+}
+
+/* Colorful Overlays */
+.overlay-ocean {
+  position: relative;
+}
+
+.overlay-ocean::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(18, 146, 70, 0.8), rgba(22, 168, 85, 0.6));
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  border-radius: inherit;
+}
+
+.overlay-ocean:hover::after {
+  opacity: 1;
+}
+
+/* Colorful Backgrounds with Patterns */
+.bg-pattern-ocean {
+  background-color: #f0fdf4;
+  background-image: 
+    radial-gradient(circle at 20% 50%, rgba(18, 146, 70, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(22, 168, 85, 0.1) 0%, transparent 50%);
+}
+
+.bg-pattern-sun {
+  background-color: #fffbeb;
+  background-image: 
+    radial-gradient(circle at 30% 30%, rgba(251, 191, 36, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 70% 70%, rgba(245, 158, 11, 0.1) 0%, transparent 50%);
+}
+
+/* Animated Color Pulse */
+.pulse-ocean {
+  animation: pulse-ocean 2s ease-in-out infinite;
+}
+
+@keyframes pulse-ocean {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(18, 146, 70, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 0 20px rgba(18, 146, 70, 0);
+  }
+}
+
+.pulse-sun {
+  animation: pulse-sun 2s ease-in-out infinite;
+}
+
+@keyframes pulse-sun {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(251, 191, 36, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 0 20px rgba(251, 191, 36, 0);
+  }
+}
+
+/* Colorful Hover Effects */
+.hover-ocean {
+  transition: all 0.3s ease;
+}
+
+.hover-ocean:hover {
+  background: linear-gradient(135deg, rgba(18, 146, 70, 0.1), rgba(22, 168, 85, 0.1));
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px rgba(18, 146, 70, 0.2);
+}
+
+.hover-sun {
+  transition: all 0.3s ease;
+}
+
+.hover-sun:hover {
+  background: linear-gradient(135deg, rgba(251, 191, 36, 0.1), rgba(245, 158, 11, 0.1));
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px rgba(251, 191, 36, 0.2);
+}

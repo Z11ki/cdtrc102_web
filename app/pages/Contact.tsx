@@ -12,9 +12,8 @@ export function Contact() {
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-  const mapQuery = encodeURIComponent('Sendafa Beke, Ethiopia');
-  const mapEmbedUrl = `https://maps.google.com/maps?q=${mapQuery}&z=14&output=embed`;
-  const mapDirectionsUrl = `https://www.google.com/maps/search/?api=1&query=${mapQuery}`;
+  const mapEmbedUrl = 'https://www.openstreetmap.org/export/embed.html?bbox=39.00196%2C9.14743%2C39.03196%2C9.17743&layer=mapnik&marker=9.1624336%2C39.0169573';
+  const mapDirectionsUrl = 'https://www.google.com/maps/search/?api=1&query=9.1624336%2C39.0169573';
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
